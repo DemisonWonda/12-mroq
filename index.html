@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot HR - Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400">
+
+  <div class="w-full max-w-md bg-white bg-opacity-90 backdrop-blur-md rounded-2xl shadow-2xl p-6">
+    <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Chatbot HR</h2>
+
+    <div id="chat-box" class="mb-4 h-72 overflow-y-auto bg-white rounded-lg p-3 shadow-inner">
+      <!-- Pesan muncul di sini -->
+    </div>
+
+    <div class="flex gap-2">
+      <input type="text" id="user-input" placeholder="Ketik pesan..." 
+             class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400" />
+      <button onclick="sendMessage()" 
+              class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg transition-all">
+        Kirim
+      </button>
+    </div>
+  </div>
+
+  <!-- <script>
+    function sendMessage() {
+      const input = document.getElementById('user-input');
+      const chatBox = document.getElementById('chat-box');
+      if (input.value.trim()) {
+        chatBox.innerHTML += `<div class="mb-2"><strong class="text-gray-700">User:</strong> ${input.value}</div>`;
+        chatBox.innerHTML += `<div class="mb-4"><strong class="text-pink-600">HR Bot:</strong> Halo! Apa yang bisa saya bantu?</div>`;
+        input.value = '';
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+    }
+  </script> -->
+  <script src="script.js"></script>
+</body>
+</html>
